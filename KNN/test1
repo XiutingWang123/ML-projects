@@ -1,0 +1,4 @@
+#emacs!/bin/bash
+
+./kNN-select yeast_train.arff yeast_test.arff 3 5 7 > yyc_y357.txt
+diff yeast357.txt yyc_y357.txt 

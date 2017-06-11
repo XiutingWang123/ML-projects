@@ -1,0 +1,15 @@
+#emacs!/bin/bash
+
+for m in {3,5}; do ./kNN yeast_train.arff yeast_test.arff $m > yyc_y_$m.txt; done
+
+for m in {3,5}; do diff yeast_$m.txt yyc_y_$m.txt; done 
+
+for m in {3,5}; do ./kNN wine_train.arff wine_test.arff $m > yyc_w_$m.txt; done
+
+for m in {3,5}; do diff wine_$m.txt yyc_w_$m.txt; done
+
+./kNN-select yeast_train.arff yeast_test.arff 3 5 7 > yyc_y357.txt
+diff yeast357.txt yyc_y357.txt
+
+./kNN-select wine_train.arff wine_test.arff 3 5 7 > yyc_w357.txt
+diff wine357.txt yyc_w357.txt
