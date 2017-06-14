@@ -11,7 +11,6 @@ import java.util.Map;
  * Instance class for more details. All ordering of attribute values in an instance follow the
  * ordering of the DataSet attributes list.
  *
- * Do not modify.
  */
 public class DataSet {
   public List<String> labels = null; // ordered list of class labels
